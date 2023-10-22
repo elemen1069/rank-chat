@@ -50,17 +50,20 @@ function send(player) {
     })
 }
 
+system.runInterval(() => {
+    for (player of world.getPlayers()) {
+        if (player.hasTag("!m") {
+            send(player);
+            player.removeTag("!m");
+        }
+    }
+},5)
+
 world.beforeEvents.chatSend.subscribe((e) => {
     const msg = e.message
     const sender = e.sender
-    e.cancel = true
-        if (msg == "!m") {
-            sender.sendMessage("§c[ 채팅창을 닫아주세요! ]");
-            system.runTimeout(() => {
-            send(sender);
-            }, 20);
-        }
-        else if (!sender.hasTag("prisoner") && !sender.hasTag("k1") && !sender.hasTag("k2") && !sender.hasTag("k2_1") && !sender.hasTag("k3") && !sender.hasTag("k3_1") && !sender.hasTag("k4") && !sender.hasTag("k4_1") && !sender.hasTag("k5")) {
+    e.cancel = true;
+        if (!sender.hasTag("prisoner") && !sender.hasTag("k1") && !sender.hasTag("k2") && !sender.hasTag("k2_1") && !sender.hasTag("k3") && !sender.hasTag("k3_1") && !sender.hasTag("k4") && !sender.hasTag("k4_1") && !sender.hasTag("k5")) {
         if (sender.hasTag("j1") && !sender.hasTag("j1_1") && !sender.hasTag("j1_2") && !sender.hasTag("j1_3")) {
             const send = ` [ 초보 나무꾼 ] ${sender.nameTag} > ${msg}`
             world.sendMessage(`${send}`)
