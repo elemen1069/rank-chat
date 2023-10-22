@@ -1,0 +1,34 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Rank Chat",
+		"description": "Made by GMkid",
+		"uuid": "7f4fcc35-21c3-4962-816f-a73698abf59d",
+		"version": [ 1, 0, 0 ],
+		"min_engine_version": [ 1, 19, 50 ]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "8f8ec35c-67d5-44de-8252-b66ce1cf6828",
+			"version": [ 1, 0, 0 ]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "24afd3db-2de6-4c85-81bd-934d86a20b68",
+			"version": [ 1, 0, 0 ],
+			"entry": "scripts/chat.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.4.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0-beta"
+		}
+	]
+}
