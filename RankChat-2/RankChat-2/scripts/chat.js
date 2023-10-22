@@ -52,7 +52,7 @@ function send(player) {
 
 system.runInterval(() => {
     for (player of world.getPlayers()) {
-        if (player.hasTag("!m") {
+        if (player.hasTag("!m")) {
             send(player);
             player.removeTag("!m");
         }
